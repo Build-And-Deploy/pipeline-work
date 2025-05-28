@@ -10,6 +10,12 @@ def call() {
                     echo "Pipeline running.."
                 }
             }
+
+            stage('PWD') {
+                steps {
+                    sh "pwd"
+                }
+            }
         }
     }
 }

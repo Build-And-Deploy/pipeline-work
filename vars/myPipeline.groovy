@@ -16,6 +16,12 @@ def call() {
                     sh "pwd"
                 }
             }
+
+            stage('Test Docker') {
+                steps {
+                    echo "docker ps"
+                }
+            }
         }
     }
 }

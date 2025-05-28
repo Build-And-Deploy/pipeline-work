@@ -19,7 +19,7 @@ def call() {
 
             stage('Test Docker') {
                 steps {
-                    echo "docker ps"
+                    sh "docker ps"
                 }
             }
         }

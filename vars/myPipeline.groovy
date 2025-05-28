@@ -1,7 +1,12 @@
 
 def call() {
     pipeline {
-        agent any
+        agent {
+            docker {
+                image 'docker:24.0-cli'
+                args '-v /var/run/docker.sock:/var/run/docker.sock'
+            }
+        }
 
         stages {
             
